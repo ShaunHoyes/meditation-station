@@ -107,14 +107,14 @@ const handlers = {
         const randomFact = factArr[factIndex];
 
         // Create speech output
-        const speechOutput = this.t('GET_FACT_MESSAGE') + randomFact + this.t('PROMO');
+        const speechOutput = this.t('GET_FACT_MESSAGE') + randomFact + " " + this.t('PROMO');
         this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), randomFact);
     },
     'AMAZON.HelpIntent': function () {
         const speechOutput = this.t('HELP_MESSAGE');
         const reprompt = this.t('HELP_MESSAGE');
-        // this.emit(':ask', speechOutput, reprompt);
-        this.emit(':ask', this.t(speechOutput), this.t(reprompt));
+        this.emit(':ask', speechOutput, reprompt);
+        // this.emit(':ask', this.t(speechOutput), this.t(reprompt));
     },
     'AMAZON.CancelIntent': function () {
         this.emit(':tell', this.t('STOP_MESSAGE'));
