@@ -111,7 +111,7 @@ const handlers = {
         const speechOutput = this.t('HELP_MESSAGE');
         const reprompt = this.t('HELP_MESSAGE');
         // this.emit(':ask', speechOutput, reprompt);
-        this.t(speechOutput, reprompt);
+        this.emit(':ask', this.t(speechOutput), this.t(reprompt));
     },
     'AMAZON.CancelIntent': function () {
         this.emit(':tell', this.t('STOP_MESSAGE'));
