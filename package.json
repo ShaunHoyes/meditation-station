@@ -1,6 +1,6 @@
 {
   "name": "alexa-facts",
-  "description": "Example Amazon Alexa skill built with the Amazon Alexa Skills SDK.",
+  "description": "Amazon Alexa skill designed to help with meditation practices.",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
