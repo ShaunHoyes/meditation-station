@@ -110,7 +110,8 @@ const handlers = {
     'AMAZON.HelpIntent': function () {
         const speechOutput = this.t('HELP_MESSAGE');
         const reprompt = this.t('HELP_MESSAGE');
-        this.emit(':ask', speechOutput, reprompt);
+        // this.emit(':ask', speechOutput, reprompt);
+        this.emit(reprompt);
     },
     'AMAZON.CancelIntent': function () {
         this.emit(':tell', this.t('STOP_MESSAGE'));
