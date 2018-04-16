@@ -33,7 +33,7 @@ const languageStrings = {
                 'If you cultivate the attitude of indifference towards the mind, gradually you will cease to identify with it.',
             ],
             SKILL_NAME: 'Meditation Station',
-            GET_FACT_MESSAGE: "Salutations! Welcome to meditation station",
+            GET_FACT_MESSAGE: "Salutations! Welcome to meditation station.",
             HELP_MESSAGE: 'You can say help me with some meditation, or, you can say exit... What can I help you with?',
             HELP_REPROMPT: 'What can I help you with?',
             STOP_MESSAGE: 'Be sure to visit agile kinetics dot com to learn how you can improve your meditation practice. Namaste!',
@@ -58,7 +58,7 @@ const languageStrings = {
                 'If you cultivate the attitude of indifference towards the mind, gradually you will cease to identify with it.',
             ],
             SKILL_NAME: 'Meditation Station',
-            GET_FACT_MESSAGE: "Salutations! Welcome to meditation station",
+            GET_FACT_MESSAGE: "Salutations! Welcome to meditation station.",
             HELP_MESSAGE: 'You can say help me with some meditation, or, you can say exit... What can I help you with?',
             HELP_REPROMPT: 'What can I help you with?',
             STOP_MESSAGE: 'Be sure to visit agile kinetics dot com to learn how you can improve your meditation practice. Namaste!',
@@ -107,7 +107,7 @@ const handlers = {
         const randomFact = factArr[factIndex];
 
         // Create speech output
-        const speechOutput = this.t('GET_FACT_MESSAGE') + randomFact + " " + this.t('PROMO');
+        const speechOutput = this.t('GET_FACT_MESSAGE') + " " + randomFact + " " + this.t('PROMO');
         this.emit(':tellWithCard', speechOutput, this.t('SKILL_NAME'), randomFact);
     },
     'AMAZON.HelpIntent': function () {
